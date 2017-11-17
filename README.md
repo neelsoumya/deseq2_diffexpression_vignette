@@ -8,14 +8,18 @@ http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.htm
 
 Installation:
 In R
-## try http:// if https:// URLs are not supported
+NOTE: try http:// if https:// URLs are not supported
 source("https://bioconductor.org/biocLite.R")
+
 biocLite("airway")
 
 
 Usage: nohup R --no-save < deseq2_poc.R
+
 OR
+
 in R 
+
 source("deseq2_poc.R")
 
 
