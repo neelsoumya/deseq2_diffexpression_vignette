@@ -30,6 +30,27 @@ data("airway")
 se <- airway
 
 ##########################################
+# Simple example code for deseq with factors
+##########################################
+countData <- matrix(1:100, ncol=4)
+condition <- factor(c("A","A","B","B"))
+dds <- DESeqDataSetFromMatrix(countData = countData, colData = DataFrame(condition), design = ~ condition)
+
+##########################################
+# run deseq
+##########################################
+results_dds <- DESeq(dds)
+
+##########################################
+# results
+##########################################
+results(results_dds)
+countData
+resultsNames(results_dds)
+summary(results_dds)
+sum(results_dds$padj < 0.05, na.rm=TRUE)
+
+##########################################
 # The constructor function below shows 
 # the generation of a DESeqDataSet from 
 # a RangedSummarizedExperiment se.
