@@ -11,6 +11,10 @@
 # source("https://bioconductor.org/biocLite.R")
 # biocLite("airway")
 #
+# if (!requireNamespace("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+# BiocManager::install("DESeq2")
+#
 # Adapted from
 # http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html
 #################################################################
