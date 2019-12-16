@@ -7,16 +7,27 @@ Differential expression analysis of single-cell sequencing data using DESeq2.
 
 
 * Installation:
+
 	In R
+	
 	NOTE: try http:// if https:// URLs are not supported
+	
+	
 	source("https://bioconductor.org/biocLite.R")
+	
 
 	biocLite("airway")
+	
+	if (!requireNamespace("BiocManager", quietly = TRUE))
+        install.packages("BiocManager")
+     BiocManager::install("DESeq2")
 
 
 * Usage:
 
+
 	nohup R --no-save < deseq2_poc.R
+	
 
 	OR
 
